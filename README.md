@@ -1,3 +1,5 @@
+配合教程视频[BV1WD4y1V7SE](https://www.bilibili.com/video/BV1WD4y1V7SE/)食用更佳
+
 # 使用方法：
 1. 直接运行`NFT.exe`
 2. 将用于更换的头像文件置于程序所在目录下（注意，头像名称应为`face`,格式应为`jpg`或`png`,程序默认优先识别`face.jpg`）
