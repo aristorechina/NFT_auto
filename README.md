@@ -24,7 +24,7 @@
 
 # 操作步骤
 
-1. 前往[Releases](https://github.com/aristorechina/NFT_auto/releases)下载打包好的程序后运行`NFT.exe`
+1. 前往[Releases](https://github.com/aristorechina/NFT_auto/releases/tag/The_final_release)下载打包好的程序后运行`NFT.exe`
 2. 将用于更换的头像文件置于程序所在目录下（注意，头像名称应为`face`,格式应为`jpg`或`png`,程序默认优先识别`face.jpg`）
 3. 根据程序指引选择登录方式
    - 若选择`复制链接`登录，请将程序输出的链接复制下来打开登录
