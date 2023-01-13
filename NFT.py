@@ -16,6 +16,12 @@ print("制作不易 求关注")
 print("本程序仅供学习交流,请勿用于违规用途")
 path = os.path.dirname(os.path.realpath(sys.argv[0]))
 new_path = "/".join(path.split("\\"))
+if os.path.exists("{}/face.jpg".format(new_path)):
+    FACE_PATH = "{}/face.jpg".format(new_path)
+elif os.path.exists("{}/face.png".format(new_path)):
+    FACE_PATH = "{}/face.png".format(new_path)
+else:
+    pass
 login_method = str(input("您希望以什么方式登录呢?(1:复制链接 2:扫码 3:自行输入数据)\n"))
 if login_method == "1" or login_method == "2":
     def tvsign(params, appkey='4409e2ce8ffd12b8', appsec='59b43e04ad6965f34319062b478f83dd'):
@@ -61,21 +67,15 @@ if login_method == "1" or login_method == "2":
         else:
             print('未知错误')
             raise
-    UID = loginData['mid']
-    ACCESS_KEY = loginData['access_token']
-    print("UID{}".format(UID))
-    print("ACCESS_KEY".format(ACCESS_KEY))
-elif login_method == "2":
+    UID = pollInfo['data']['mid']
+    ACCESS_KEY = pollInfo['data']['access_token']
+    print("UID:{}".format(UID))
+    print("ACCESS_KEY:{}".format(ACCESS_KEY))
+elif login_method == "3":
     UID = input("UID:\n")
     ACCESS_KEY = input("ACCESS_KEY:\n")
 else:
     print("输入有误")
-if os.path.exists("{}/{}.jpg".format(new_path,UID)):
-    FACE_PATH = "{}/{}.jpg".format(new_path,UID)
-elif os.path.exists("{}/{}.png".format(new_path,UID)):
-    FACE_PATH = "{}/{}.png".format(new_path,UID)
-else:
-    pass
 card_type = str(input("请在选择您想使用数字周边的卡片种类后再下方输入其对应id后按下回车\n目前存在的数字周边:\nSNH48荣耀时刻数字写真集:1\n胶囊计划数字典藏集:4\n天官赐福动画2周年数字典藏:5\nA-AKB48TSH四周年数字集换卡:6\nB-AKB48TSH四周年数字集换卡:7\nC-AKB48TSH四周年数字集换卡:8\nD-AKB48TSH四周年数字集换卡:9\nE-AKB48TSH四周年数字集换卡:10\nF-AKB48TSH四周年数字集换卡:11\nG-AKB48TSH四周年数字集换卡:12\nH-AKB48TSH四周年数字集换卡:13\n三体动画数字周边:14\n2022百大UP主数字卡集:18\n"))
 class Crypto:
     APPKEY = '4409e2ce8ffd12b8'
